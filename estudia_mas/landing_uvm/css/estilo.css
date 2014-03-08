@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font-family: 'Cuprum', sans-serif;
+	color:#666;
+	
+	}
+
+
+/* all form DIVs have position property set to relative so we can easily position newly created SPAN */
+form div{position:relative;} 
+
+/* setting the width and height of the SELECT element to match the replacing graphics */
+select.select{
+    position:relative;
+    z-index:10;
+    width:251px !important;
+    height:37px !important;
+    line-height:26px;
+}
+
+/* dynamically created SPAN, placed below the SELECT */
+span.select{
+//    position:absolute;
+//    bottom:0;
+	position: relative;
+	top: -30px;
+    float:left;
+    left:0;
+    width:251px;
+    height:37px;
+    line-height:37px;
+    text-indent:10px;
+    background:url(../imagenes/bg_select.png) no-repeat 0 0;
+    cursor:default;
+    z-index:1;
+    font-size: 15px;
+	}
+	
+
+
+.datospersonales{
+	background-image:url(../imagenes/datos_personales.png);
+	color:#FFFFFF;
+	font-family: 'Cuprum', sans-serif;
+	padding:8px;
+	background-repeat:no-repeat;
+	
+	
+	}
+	
+	
+input{ 
+	
+	border: 1px solid #CCC;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+    padding: 3px;
+	color:#666;
+	font-family: 'Cuprum', sans-serif;
+}
+
+input::-webkit-input-placeholder {
+    color:    #666;
+}
+input:-moz-placeholder {
+    color:    #666;
+
+}
+
+.foter{
+	background-image:url(../imagenes/footer.png);
+	height:219px;
+	background-repeat:no-repeat;
+	
+	}
+.obligatorio{
+	color:#FF0000;
+	size:15px;
+	
+	
+	}
+
+tr {
+	margin-bottom: 10px;
+}

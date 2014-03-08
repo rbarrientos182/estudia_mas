@@ -1,0 +1,56 @@
+<html>
+<body>
+<script type="text/javascript">
+function verifica()
+{
+  var sel = document.getElementById( 'sel' );
+  var textOculto = document.getElementById( 'textOculto' );
+  
+  if( sel.options[ sel.selectedIndex ].value > '0' )
+  {
+    textOculto.style.display = 'block';
+  }
+  else
+  {
+    textOculto.style.display = 'none';
+  }
+}  
+</script>
+<form action="#"  method="post">
+<table width="90%" border="0" cellspacing="1" cellpadding="1">
+  <tr>
+    <td width="28%">
+    <select id="sel" onchange="verifica();"> 
+       <option value="0">Eliga</option> 
+       <option value="1">Fondo</option> 
+       <option value="2">Acabado</option> 
+       <option value="3">Disolvente</option> 
+       <option value="5">Otros</option>      
+   	</select>
+    </td>
+    <td width="72%">
+    <div id="textOculto" style="display: none;">
+  	<input type="text" id="txtOtro" />
+	</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+   	<select id="sel" onchange="verifica();"> 
+       <option value="0">Eliga</option> 
+       <option value="1">Fondo</option> 
+       <option value="2">Acabado</option> 
+       <option value="3">Disolvente</option> 
+       <option value="5">Otros</option>      
+   	</select>
+    </td>
+    <td>
+    <div id="textOculto" style="display: none;">
+  	<input type="text" id="txtOtro" />
+	</div>
+    </td>
+  </tr>
+</table>
+</form>
+</body>  
+</html> 

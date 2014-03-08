@@ -1,0 +1,2574 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Ziown Admin Panel</title>
+<!-- stylesheets -->
+<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/ui/jquery-ui-1.8.13.custom.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/elfinder.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/Sourcerer-1.2.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/chosen.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/uniform.default.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/data-table.css" type="text/css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/fullcalendar.css" media="screen"/>
+<link rel="stylesheet" href="css/colorpicker.css" type="text/css" media="screen"/>
+<!-- Jquery -->
+<script src="js/jquery-1.6.2.min.js"></script>
+<script src="js/jquery-ui-1.8.16.custom.js"></script>
+<script src="js/tiny_mce/jquery.tinymce.js"></script>
+<script src="js/chosen.jquery.js"></script>
+<script src="js/jquery.raty.js"></script>
+<script src="js/jquery.uniform.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/fileuploader.js"></script>
+<script src="js/fullcalendar.min.js"></script>
+<script src="js/Sourcerer-1.2.js"></script>
+<script src="js/jquery.tipTip.js"></script>
+<script src="js/jquery.menu.js"></script>
+<script src="js/jquery.accordion.js"></script>
+<script src="js/jquery.collapsible.js"></script>
+<script src="js/jquery.treeview.js"></script>
+<script src="js/elfinder.min.js"></script>
+<!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
+<script src="js/jquery.flot.js"></script>
+<script src="js/jquery.flot.pie.js"></script>
+<script type="text/javascript" src="js/colorpicker.js"></script>
+<script type="text/javascript" src="js/eye.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/layout.js"></script>
+<script type="text/javascript" src="js/jquery.notify.js"></script>
+<script type="text/javascript" src="js/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="js/jquery.jBreadCrumb.1.1.js"></script>
+<script type="text/javascript" src="js/iphone-style-checkboxes.js"></script>
+<script src="js/custom.script.js"></script>
+</head>
+<body>
+<div id="panel-right" class="panel-close">
+	<span class="right-toggle" title="Shortcut">&nbsp;</span>
+	<ul class="shortcut-panel">
+		<li><a href="#" title="Dashboard"><span class="shortcut-icon dboard-x-icon"></span></a></li>
+		<li><a href="#" title="Form"><span class="shortcut-icon frm-x-element"></span></a></li>
+		<li><a href="#" title="Chart"><span class="shortcut-icon chart-x-icon"></span></a></li>
+		<li><a href="#" title="Table"><span class="shortcut-icon tbl-x-icon"></span></a></li>
+		<li><a href="#" title="Gallery"><span class="shortcut-icon gal-x-icon"></span></a></li>
+		<li><a href="#" title="Typography"><span class="shortcut-icon typo-x-icon"></span></a></li>
+		<li><a href="#" title="UI Elements"><span class="shortcut-icon ui-x-elements"></span></a></li>
+		<li><a href="#" title="Calendar"><span class="shortcut-icon calendar-x-icon"></span></a></li>
+	</ul>
+</div>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo" class="droptips">
+			<a href="#" title="Admin Panel"><img src="images/logo.png" width="190" height="58" alt="Admin Panel"></a>
+		</div>
+		<div id="topbar">
+			<div class="search-box">
+				<form action="#" method="post">
+					<input name="searchtext" class="search-text" type="text">
+					<input name="searchbtn" type="submit" class="search-button">
+				</form>
+			</div>
+			<ul class="notify-button">
+				<li class="notify-alert"><a href="#"><span class="new-alert">30</span></a></li>
+				<li class="msg-alert"><a href="#"><span class="new-alert">65</span></a></li>
+			</ul>
+		</div>
+		<div id="usermenu">
+			<a href="#" class="admin-user"><span class="mnu-indicator"></span>Administrator<span class="user-icon"></span></a>
+			<div class="sub-menu">
+				<ul>
+					<li><a href="#"><span class="icon-block-black cog-b"></span>Account Settings</a></li>
+					<li><a href="#"><span class="icon-block-black info-about-b"></span>Help?</a></li>
+					<li><a href="#"><span class="icon-block-black box-incoming-b"></span>Inbox</a></li>
+					<li><a href="#"><span class="icon-block-black locked-tw-b"></span>Logout</a></li>
+				</ul>
+				<div class="admin-thumb">
+					<img src="images/user-thumb1.png" alt="user" width="50" height="50"><span><a href="#" class="p-edit">Edit&nbsp;Profile</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="shortcur-bar" class="column">
+		<ul>
+			<li><a href="#"><span class="sc-icon dashboard"></span> Dashboard </a></li>
+			<li><a href="#"><span class="sc-icon settings"></span> Settings </a></li>
+			<li><a href="#"><span class="sc-icon satistics"></span> Statistics</a></li>
+			<li><a href="#"><span class="sc-icon userlist"></span> User's List </a></li>
+			<li><a href="#"><span class="sc-icon tasklist"></span> Task List </a></li>
+			<li><a href="#"><span class="sc-icon content-c"></span> Content </a></li>
+			<li><a href="#"><span class="sc-icon reports-c"></span> Reports </a></li>
+			<li><a href="#"><span class="sc-icon medialibrary"></span> Media Library </a></li>
+		</ul>
+	</div>
+	<div id="container">
+		<div id="sidebar">
+			<ul id="sidenav" class="menu collapsible">
+				<li><a href="dashboard.html"><span class="nav-icon dboard-icon"></span> Dashboard</a></li>
+				<li><a href="#"><span class="nav-icon frm-element"></span> Forms<span class="n-count">3</span></a>
+				<ul class="acitem">
+					<li><a href="form-leftlabel.html"><span class="list-icon">&nbsp;</span> Left Label Form</a></li>
+					<li><a href="form-toplabel.html"><span class="list-icon">&nbsp;</span>Top Label Form</a></li>
+					<li><a href="content-page-form.html"><span class="list-icon">&nbsp;</span>Post Form</a></li>
+				</ul>
+				</li>
+				<li><a href="chart.html"><span class="nav-icon chart-icon"></span> Charts</a></li>
+				<li><a href="tables.html" class="active"><span class="nav-icon tbl-icon"></span> Tables<span class="active-nidicator">&nbsp;</span></a></li>
+				<li><a href="gallery.html"><span class="nav-icon gal-icon"></span> Gallery</a></li>
+				<li><a href="typography.html"><span class="nav-icon typo-icon"></span> Typography</a></li>
+				<li><a href="user-interface-elements.html"><span class="nav-icon ui-elements"></span> All Interface Elements</a></li>
+				<li><a href="calendar.html"><span class="nav-icon calendar-icon"></span> Calendar</a></li>
+				<li><a href="editor.html"><span class="nav-icon editor-icon"></span> Editor</a></li>
+				<li><a href="file-explorer.html"><span class="nav-icon file-exe"></span> File Explorer</a></li>
+				<li><a href="all-widgets.html"><span class="nav-icon widget-icon"></span> All Widgets</a></li>
+				<li><a href="404.html"><span class="nav-icon err-icon"></span> 404 Error Page</a></li>
+				<li><a href="buttons-icons.html"><span class="nav-icon btns-icons"></span> All Buttons and Icons</a></li>
+				<li><a href="invoice.html"><span class="nav-icon invoice-icon"></span> Invoice</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<div class="container_12">
+				<div class="widget-panel grid_12">
+					<div class="widget-top">
+						<h4>Table 1</h4>
+					</div>
+					<div class="widget-content module">
+						<table class="display data-table">
+						<thead>
+						<tr>
+							<th>
+								 Rendering engine
+							</th>
+							<th>
+								 Browser
+							</th>
+							<th>
+								 Platform(s)
+							</th>
+							<th>
+								 Engine version
+							</th>
+							<th>
+								 CSS grade
+							</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr class="gradeX">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 4.0
+							</td>
+							<td>
+								 Win 95+
+							</td>
+							<td class="center">
+								 4
+							</td>
+							<td class="center">
+								 X
+							</td>
+						</tr>
+						<tr class="gradeC">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 5.0
+							</td>
+							<td>
+								 Win 95+
+							</td>
+							<td class="center">
+								 5
+							</td>
+							<td class="center">
+								 C
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 5.5
+							</td>
+							<td>
+								 Win 95+
+							</td>
+							<td class="center">
+								 5.5
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 6
+							</td>
+							<td>
+								 Win 98+
+							</td>
+							<td class="center">
+								 6
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 7
+							</td>
+							<td>
+								 Win XP SP2+
+							</td>
+							<td class="center">
+								 7
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 AOL browser (AOL desktop)
+							</td>
+							<td>
+								 Win XP
+							</td>
+							<td class="center">
+								 6
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Firefox 1.0
+							</td>
+							<td>
+								 Win 98+ / OSX.2+
+							</td>
+							<td class="center">
+								 1.7
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Firefox 1.5
+							</td>
+							<td>
+								 Win 98+ / OSX.2+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Firefox 2.0
+							</td>
+							<td>
+								 Win 98+ / OSX.2+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Firefox 3.0
+							</td>
+							<td>
+								 Win 2k+ / OSX.3+
+							</td>
+							<td class="center">
+								 1.9
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Camino 1.0
+							</td>
+							<td>
+								 OSX.2+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Camino 1.5
+							</td>
+							<td>
+								 OSX.3+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Netscape 7.2
+							</td>
+							<td>
+								 Win 95+ / Mac OS 8.6-9.2
+							</td>
+							<td class="center">
+								 1.7
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Netscape Browser 8
+							</td>
+							<td>
+								 Win 98SE+
+							</td>
+							<td class="center">
+								 1.7
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Netscape Navigator 9
+							</td>
+							<td>
+								 Win 98+ / OSX.2+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.0
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.1
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.1
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.2
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.2
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.3
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.3
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.4
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.4
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.5
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.5
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.6
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.6
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.7
+							</td>
+							<td>
+								 Win 98+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.7
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.8
+							</td>
+							<td>
+								 Win 98+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Seamonkey 1.1
+							</td>
+							<td>
+								 Win 98+ / OSX.2+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Epiphany 2.20
+							</td>
+							<td>
+								 Gnome
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 Safari 1.2
+							</td>
+							<td>
+								 OSX.3
+							</td>
+							<td class="center">
+								 125.5
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 Safari 1.3
+							</td>
+							<td>
+								 OSX.3
+							</td>
+							<td class="center">
+								 312.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 Safari 2.0
+							</td>
+							<td>
+								 OSX.4+
+							</td>
+							<td class="center">
+								 419.3
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 Safari 3.0
+							</td>
+							<td>
+								 OSX.4+
+							</td>
+							<td class="center">
+								 522.1
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 OmniWeb 5.5
+							</td>
+							<td>
+								 OSX.4+
+							</td>
+							<td class="center">
+								 420
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 iPod Touch / iPhone
+							</td>
+							<td>
+								 iPod
+							</td>
+							<td class="center">
+								 420.1
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 S60
+							</td>
+							<td>
+								 S60
+							</td>
+							<td class="center">
+								 413
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 7.0
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 7.5
+							</td>
+							<td>
+								 Win 95+ / OSX.2+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 8.0
+							</td>
+							<td>
+								 Win 95+ / OSX.2+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 8.5
+							</td>
+							<td>
+								 Win 95+ / OSX.2+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 9.0
+							</td>
+							<td>
+								 Win 95+ / OSX.3+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 9.2
+							</td>
+							<td>
+								 Win 88+ / OSX.3+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 9.5
+							</td>
+							<td>
+								 Win 88+ / OSX.3+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera for Wii
+							</td>
+							<td>
+								 Wii
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Nokia N800
+							</td>
+							<td>
+								 N800
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Nintendo DS browser
+							</td>
+							<td>
+								 Nintendo DS
+							</td>
+							<td class="center">
+								 8.5
+							</td>
+							<td class="center">
+								 C/A<sup>1</sup>
+							</td>
+						</tr>
+						<tr class="gradeC">
+							<td>
+								 KHTML
+							</td>
+							<td>
+								 Konqureror 3.1
+							</td>
+							<td>
+								 KDE 3.1
+							</td>
+							<td class="center">
+								 3.1
+							</td>
+							<td class="center">
+								 C
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 KHTML
+							</td>
+							<td>
+								 Konqureror 3.3
+							</td>
+							<td>
+								 KDE 3.3
+							</td>
+							<td class="center">
+								 3.3
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 KHTML
+							</td>
+							<td>
+								 Konqureror 3.5
+							</td>
+							<td>
+								 KDE 3.5
+							</td>
+							<td class="center">
+								 3.5
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeX">
+							<td>
+								 Tasman
+							</td>
+							<td>
+								 Internet Explorer 4.5
+							</td>
+							<td>
+								 Mac OS 8-9
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 X
+							</td>
+						</tr>
+						<tr class="gradeC">
+							<td>
+								 Tasman
+							</td>
+							<td>
+								 Internet Explorer 5.1
+							</td>
+							<td>
+								 Mac OS 7.6-9
+							</td>
+							<td class="center">
+								 1
+							</td>
+							<td class="center">
+								 C
+							</td>
+						</tr>
+						<tr class="gradeC">
+							<td>
+								 Tasman
+							</td>
+							<td>
+								 Internet Explorer 5.2
+							</td>
+							<td>
+								 Mac OS 8-X
+							</td>
+							<td class="center">
+								 1
+							</td>
+							<td class="center">
+								 C
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Misc
+							</td>
+							<td>
+								 NetFront 3.1
+							</td>
+							<td>
+								 Embedded devices
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 C
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Misc
+							</td>
+							<td>
+								 NetFront 3.4
+							</td>
+							<td>
+								 Embedded devices
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						</tbody>
+						<tfoot>
+						<tr>
+							<th>
+								 Rendering engine
+							</th>
+							<th>
+								 Browser
+							</th>
+							<th>
+								 Platform(s)
+							</th>
+							<th>
+								 Engine version
+							</th>
+							<th>
+								 CSS grade
+							</th>
+						</tr>
+						</tfoot>
+						</table>
+					</div>
+				</div>
+				<div class="widget-panel grid_12">
+					<div class="widget-top">
+						<h4>Table 2</h4>
+					</div>
+					<div class="widget-content module">
+						<table class="display data-table-theme">
+						<thead>
+						<tr>
+							<th>
+								 Rendering engine
+							</th>
+							<th>
+								 Browser
+							</th>
+							<th>
+								 Platform(s)
+							</th>
+							<th>
+								 Engine version
+							</th>
+							<th>
+								 CSS grade
+							</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr class="gradeX">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 4.0
+							</td>
+							<td>
+								 Win 95+
+							</td>
+							<td class="center">
+								 4
+							</td>
+							<td class="center">
+								 X
+							</td>
+						</tr>
+						<tr class="gradeC">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 5.0
+							</td>
+							<td>
+								 Win 95+
+							</td>
+							<td class="center">
+								 5
+							</td>
+							<td class="center">
+								 C
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 5.5
+							</td>
+							<td>
+								 Win 95+
+							</td>
+							<td class="center">
+								 5.5
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 6
+							</td>
+							<td>
+								 Win 98+
+							</td>
+							<td class="center">
+								 6
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 7
+							</td>
+							<td>
+								 Win XP SP2+
+							</td>
+							<td class="center">
+								 7
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 AOL browser (AOL desktop)
+							</td>
+							<td>
+								 Win XP
+							</td>
+							<td class="center">
+								 6
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Firefox 1.0
+							</td>
+							<td>
+								 Win 98+ / OSX.2+
+							</td>
+							<td class="center">
+								 1.7
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Firefox 1.5
+							</td>
+							<td>
+								 Win 98+ / OSX.2+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Firefox 2.0
+							</td>
+							<td>
+								 Win 98+ / OSX.2+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Firefox 3.0
+							</td>
+							<td>
+								 Win 2k+ / OSX.3+
+							</td>
+							<td class="center">
+								 1.9
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Camino 1.0
+							</td>
+							<td>
+								 OSX.2+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Camino 1.5
+							</td>
+							<td>
+								 OSX.3+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Netscape 7.2
+							</td>
+							<td>
+								 Win 95+ / Mac OS 8.6-9.2
+							</td>
+							<td class="center">
+								 1.7
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Netscape Browser 8
+							</td>
+							<td>
+								 Win 98SE+
+							</td>
+							<td class="center">
+								 1.7
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Netscape Navigator 9
+							</td>
+							<td>
+								 Win 98+ / OSX.2+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.0
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.1
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.1
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.2
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.2
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.3
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.3
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.4
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.4
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.5
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.5
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.6
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.6
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.7
+							</td>
+							<td>
+								 Win 98+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.7
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Mozilla 1.8
+							</td>
+							<td>
+								 Win 98+ / OSX.1+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Seamonkey 1.1
+							</td>
+							<td>
+								 Win 98+ / OSX.2+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Epiphany 2.20
+							</td>
+							<td>
+								 Gnome
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 Safari 1.2
+							</td>
+							<td>
+								 OSX.3
+							</td>
+							<td class="center">
+								 125.5
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 Safari 1.3
+							</td>
+							<td>
+								 OSX.3
+							</td>
+							<td class="center">
+								 312.8
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 Safari 2.0
+							</td>
+							<td>
+								 OSX.4+
+							</td>
+							<td class="center">
+								 419.3
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 Safari 3.0
+							</td>
+							<td>
+								 OSX.4+
+							</td>
+							<td class="center">
+								 522.1
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 OmniWeb 5.5
+							</td>
+							<td>
+								 OSX.4+
+							</td>
+							<td class="center">
+								 420
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 iPod Touch / iPhone
+							</td>
+							<td>
+								 iPod
+							</td>
+							<td class="center">
+								 420.1
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Webkit
+							</td>
+							<td>
+								 S60
+							</td>
+							<td>
+								 S60
+							</td>
+							<td class="center">
+								 413
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 7.0
+							</td>
+							<td>
+								 Win 95+ / OSX.1+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 7.5
+							</td>
+							<td>
+								 Win 95+ / OSX.2+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 8.0
+							</td>
+							<td>
+								 Win 95+ / OSX.2+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 8.5
+							</td>
+							<td>
+								 Win 95+ / OSX.2+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 9.0
+							</td>
+							<td>
+								 Win 95+ / OSX.3+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 9.2
+							</td>
+							<td>
+								 Win 88+ / OSX.3+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera 9.5
+							</td>
+							<td>
+								 Win 88+ / OSX.3+
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Opera for Wii
+							</td>
+							<td>
+								 Wii
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Nokia N800
+							</td>
+							<td>
+								 N800
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Presto
+							</td>
+							<td>
+								 Nintendo DS browser
+							</td>
+							<td>
+								 Nintendo DS
+							</td>
+							<td class="center">
+								 8.5
+							</td>
+							<td class="center">
+								 C/A<sup>1</sup>
+							</td>
+						</tr>
+						<tr class="gradeC">
+							<td>
+								 KHTML
+							</td>
+							<td>
+								 Konqureror 3.1
+							</td>
+							<td>
+								 KDE 3.1
+							</td>
+							<td class="center">
+								 3.1
+							</td>
+							<td class="center">
+								 C
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 KHTML
+							</td>
+							<td>
+								 Konqureror 3.3
+							</td>
+							<td>
+								 KDE 3.3
+							</td>
+							<td class="center">
+								 3.3
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 KHTML
+							</td>
+							<td>
+								 Konqureror 3.5
+							</td>
+							<td>
+								 KDE 3.5
+							</td>
+							<td class="center">
+								 3.5
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						<tr class="gradeX">
+							<td>
+								 Tasman
+							</td>
+							<td>
+								 Internet Explorer 4.5
+							</td>
+							<td>
+								 Mac OS 8-9
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 X
+							</td>
+						</tr>
+						<tr class="gradeC">
+							<td>
+								 Tasman
+							</td>
+							<td>
+								 Internet Explorer 5.1
+							</td>
+							<td>
+								 Mac OS 7.6-9
+							</td>
+							<td class="center">
+								 1
+							</td>
+							<td class="center">
+								 C
+							</td>
+						</tr>
+						<tr class="gradeC">
+							<td>
+								 Tasman
+							</td>
+							<td>
+								 Internet Explorer 5.2
+							</td>
+							<td>
+								 Mac OS 8-X
+							</td>
+							<td class="center">
+								 1
+							</td>
+							<td class="center">
+								 C
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Misc
+							</td>
+							<td>
+								 NetFront 3.1
+							</td>
+							<td>
+								 Embedded devices
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 C
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Misc
+							</td>
+							<td>
+								 NetFront 3.4
+							</td>
+							<td>
+								 Embedded devices
+							</td>
+							<td class="center">
+								 -
+							</td>
+							<td class="center">
+								 A
+							</td>
+						</tr>
+						</tbody>
+						<tfoot>
+						<tr>
+							<th>
+								 Rendering engine
+							</th>
+							<th>
+								 Browser
+							</th>
+							<th>
+								 Platform(s)
+							</th>
+							<th>
+								 Engine version
+							</th>
+							<th>
+								 CSS grade
+							</th>
+						</tr>
+						</tfoot>
+						</table>
+					</div>
+				</div>
+				<div class="widget-panel grid_12">
+					<div class="widget-top">
+						<h4>Table 3</h4>
+					</div>
+					<div class="widget-content module">
+						<table class="display data-table-noConfig">
+						<thead>
+						<tr>
+							<th>
+								 Rendering engine
+							</th>
+							<th>
+								 Browser
+							</th>
+							<th>
+								 Platform(s)
+							</th>
+							<th>
+								 Engine version
+							</th>
+							<th>
+								 Action
+							</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr class="gradeX">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 4.0
+							</td>
+							<td>
+								 Win 95+
+							</td>
+							<td class="center">
+								 4
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-add" href="#" title="Add">Add</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Approve</a></span><span><a class="action-icons c-suspend" href="#" title="Suspend">Suspend</a></span><span><a class="action-icons c-pending" href="#" title="Pending">Pending</a></span><span><a class="action-icons c-Delete" href="#" title="Delete">Delete</a></span>
+							</td>
+						</tr>
+						<tr class="gradeC">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 5.0
+							</td>
+							<td>
+								 Win 95+
+							</td>
+							<td class="center">
+								 5
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-add" href="#" title="Add">Add</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Approve</a></span><span><a class="action-icons c-suspend" href="#" title="Suspend">Suspend</a></span><span><a class="action-icons c-pending" href="#" title="Pending">Pending</a></span><span><a class="action-icons c-Delete" href="#" title="Delete">Delete</a></span>
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 5.5
+							</td>
+							<td>
+								 Win 95+
+							</td>
+							<td class="center">
+								 5.5
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-add" href="#" title="Add">Add</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Approve</a></span><span><a class="action-icons c-suspend" href="#" title="Suspend">Suspend</a></span><span><a class="action-icons c-pending" href="#" title="Pending">Pending</a></span><span><a class="action-icons c-Delete" href="#" title="Delete">Delete</a></span>
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 6
+							</td>
+							<td>
+								 Win 98+
+							</td>
+							<td class="center">
+								 6
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-add" href="#" title="Add">Add</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Approve</a></span><span><a class="action-icons c-suspend" href="#" title="Suspend">Suspend</a></span><span><a class="action-icons c-pending" href="#" title="Pending">Pending</a></span><span><a class="action-icons c-Delete" href="#" title="Delete">Delete</a></span>
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 Internet Explorer 7
+							</td>
+							<td>
+								 Win XP SP2+
+							</td>
+							<td class="center">
+								 7
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-add" href="#" title="Add">Add</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Approve</a></span><span><a class="action-icons c-suspend" href="#" title="Suspend">Suspend</a></span><span><a class="action-icons c-pending" href="#" title="Pending">Pending</a></span><span><a class="action-icons c-Delete" href="#" title="Delete">Delete</a></span>
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Trident
+							</td>
+							<td>
+								 AOL browser (AOL desktop)
+							</td>
+							<td>
+								 Win XP
+							</td>
+							<td class="center">
+								 6
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-add" href="#" title="Add">Add</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Approve</a></span><span><a class="action-icons c-suspend" href="#" title="Suspend">Suspend</a></span><span><a class="action-icons c-pending" href="#" title="Pending">Pending</a></span><span><a class="action-icons c-Delete" href="#" title="Delete">Delete</a></span>
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Firefox 1.0
+							</td>
+							<td>
+								 Win 98+ / OSX.2+
+							</td>
+							<td class="center">
+								 1.7
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-add" href="#" title="Add">Add</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Approve</a></span><span><a class="action-icons c-suspend" href="#" title="Suspend">Suspend</a></span><span><a class="action-icons c-pending" href="#" title="Pending">Pending</a></span><span><a class="action-icons c-Delete" href="#" title="Delete">Delete</a></span>
+							</td>
+						</tr>
+						<tr class="gradeA">
+							<td>
+								 Gecko
+							</td>
+							<td>
+								 Firefox 1.5
+							</td>
+							<td>
+								 Win 98+ / OSX.2+
+							</td>
+							<td class="center">
+								 1.8
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-add" href="#" title="Add">Add</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Approve</a></span><span><a class="action-icons c-suspend" href="#" title="Suspend">Suspend</a></span><span><a class="action-icons c-pending" href="#" title="Pending">Pending</a></span><span><a class="action-icons c-Delete" href="#" title="Delete">Delete</a></span>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="widget-panel grid_12">
+					<div class="widget-top">
+						<h4>User Table</h4>
+					</div>
+					<div class="widget-content module">
+						<table class="display data-grid">
+						<thead>
+						<tr>
+							<th>
+								 User Name
+							</th>
+							<th>
+								 Name
+							</th>
+							<th>
+								 Address
+							</th>
+							<th>
+								 Email
+							</th>
+							<th>
+								 Thumb
+							</th>
+							<th>
+								 Status
+							</th>
+							<th>
+								 Action
+							</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>
+								<a href="#">Jhon</a>
+							</td>
+							<td>
+								<a href="#">Jhon Doe</a>
+							</td>
+							<td>
+								 Address Line
+							</td>
+							<td class="center">
+								 jhon@hostname.com
+							</td>
+							<td class="center">
+								<div class="user-thumb">
+									<a href="#"><img height="40" width="40" alt="User" src="images/user-thumb1.png"></a>
+								</div>
+							</td>
+							<td class="center">
+								<span class="label l-new">New</span><span><a class="action-icons c-pending" href="#" title="Pending">Pending</a></span>
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Approve</a></span><span><a class="action-icons c-suspend" href="#" title="Suspend">Suspend</a></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">Jaman</a>
+							</td>
+							<td>
+								<a href="#">Ui Jaman</a>
+							</td>
+							<td>
+								 Address Line
+							</td>
+							<td class="center">
+								 jaman@hostname.com
+							</td>
+							<td class="center">
+								<div class="user-thumb">
+									<a href="#"><img height="40" width="40" alt="User" src="images/user-thumb1.png"></a>
+								</div>
+							</td>
+							<td class="center">
+								<span class="label l-suspend">Suspend</span>
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Approve</a></span><span><a class="action-icons c-suspend" href="#" title="Suspend">Suspend</a></span>
+							</td>
+						</tr>
+						</tbody>
+						<tfoot>
+						<tr>
+							<th>
+								 User Name
+							</th>
+							<th>
+								 Name
+							</th>
+							<th>
+								 Address
+							</th>
+							<th>
+								 Email
+							</th>
+							<th>
+								 Thumb
+							</th>
+							<th>
+								 Status
+							</th>
+							<th>
+								 Action
+							</th>
+						</tr>
+						</tfoot>
+						</table>
+					</div>
+				</div>
+				<div class="widget-panel grid_12">
+					<div class="widget-top">
+						<h4>Task List</h4>
+					</div>
+					<div class="widget-content module">
+						<table class="display data-grid">
+						<thead>
+						<tr>
+							<th>
+								 Id
+							</th>
+							<th>
+								 Task
+							</th>
+							<th>
+								 Dead Line
+							</th>
+							<th>
+								 Priority
+							</th>
+							<th>
+								 Status
+							</th>
+							<th>
+								 Complete Date
+							</th>
+							<th>
+								 Action
+							</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>
+								<a href="#">01</a>
+							</td>
+							<td>
+								<a href="#" class="t-complete">Pellentesque ut massa ut ligula ... </a>
+							</td>
+							<td class="sdate center">
+								 1st FEB 2012
+							</td>
+							<td class="center">
+								<span class="label l-high">High</span>
+							</td>
+							<td class="center">
+								<span class="label l-success">Done</span>
+							</td>
+							<td class="center sdate">
+								 3rd FEB 2012
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Done</a></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">02</a>
+							</td>
+							<td>
+								<a href="#" class="t-complete">Nulla non ante dui, sit amet ... </a>
+							</td>
+							<td class="sdate center">
+								 1st FEB 2012
+							</td>
+							<td class="center">
+								<span class="label l-low">Low</span>
+							</td>
+							<td class="center">
+								<span class="label l-success">Done</span>
+							</td>
+							<td class="center sdate">
+								 3rd FEB 2012
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Done</a></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">03</a>
+							</td>
+							<td>
+								<a href="#" class="t-complete">Aliquam eu pellentesque... </a>
+							</td>
+							<td class="sdate center">
+								 1st FEB 2012
+							</td>
+							<td class="center">
+								<span class="label l-medium">Medium</span>
+							</td>
+							<td class="center">
+								<span class="label l-success">Done</span>
+							</td>
+							<td class="center sdate">
+								 3rd FEB 2012
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Done</a></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">04</a>
+							</td>
+							<td>
+								<a href="#">Maecenas egestas alique... </a>
+							</td>
+							<td class="sdate center">
+								 1st FEB 2012
+							</td>
+							<td class="center">
+								<span class="label l-high">High</span>
+							</td>
+							<td class="center">
+								<span class="label l-pending">Pending</span>
+							</td>
+							<td class="center sdate">
+								 -
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Done</a></span>
+							</td>
+						</tr>
+						</tbody>
+						<tfoot>
+						<tr>
+							<th>
+								 Id
+							</th>
+							<th>
+								 Task
+							</th>
+							<th>
+								 Dead Line
+							</th>
+							<th>
+								 Priority
+							</th>
+							<th>
+								 Status
+							</th>
+							<th>
+								 Complete Date
+							</th>
+							<th>
+								 Action
+							</th>
+						</tr>
+						</tfoot>
+						</table>
+					</div>
+				</div>
+				<div class="widget-panel grid_12">
+					<div class="widget-top">
+						<h4>Content Table</h4>
+					</div>
+					<div class="widget-content module">
+						<table class="display data-grid">
+						<thead>
+						<tr>
+							<th>
+								 Id
+							</th>
+							<th>
+								 Details
+							</th>
+							<th>
+								 Submit Date
+							</th>
+							<th>
+								 Submited By
+							</th>
+							<th>
+								 Status
+							</th>
+							<th>
+								 Publish Date
+							</th>
+							<th>
+								 Action
+							</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>
+								<a href="#">01</a>
+							</td>
+							<td>
+								<a href="#">Pellentesque ut massa ut ligula ... </a>
+							</td>
+							<td class="sdate center">
+								 1st FEB 2012
+							</td>
+							<td class="center">
+								 Jaman
+							</td>
+							<td class="center">
+								<span class="label l-success">Publish</span>
+							</td>
+							<td class="center sdate">
+								 3rd FEB 2012
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Publish</a></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">02</a>
+							</td>
+							<td>
+								<a href="#">Nulla non ante dui, sit amet ... </a>
+							</td>
+							<td class="sdate center">
+								 1st FEB 2012
+							</td>
+							<td class="center">
+								 Jhon
+							</td>
+							<td class="center">
+								<span class="label l-success">Publish</span>
+							</td>
+							<td class="center sdate">
+								 3rd FEB 2012
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Publish</a></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">03</a>
+							</td>
+							<td>
+								<a href="#">Aliquam eu pellentesque... </a>
+							</td>
+							<td class="sdate center">
+								 1st FEB 2012
+							</td>
+							<td class="center">
+								 Mike
+							</td>
+							<td class="center">
+								<span class="label l-success">Publish</span>
+							</td>
+							<td class="center sdate">
+								 3rd FEB 2012
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Publish</a></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">04</a>
+							</td>
+							<td>
+								<a href="#">Maecenas egestas alique... </a>
+							</td>
+							<td class="sdate center">
+								 1st FEB 2012
+							</td>
+							<td class="center">
+								 Sam
+							</td>
+							<td class="center">
+								<span class="label l-pending">Pending</span>
+							</td>
+							<td class="center sdate">
+								 -
+							</td>
+							<td class="center">
+								<span><a class="action-icons c-edit" href="#" title="Edit">Edit</a></span><span><a class="action-icons c-delete" href="#" title="delete">Delete</a></span><span><a class="action-icons c-approve" href="#" title="Approve">Publish</a></span>
+							</td>
+						</tr>
+						</tbody>
+						<tfoot>
+						<tr>
+							<th>
+								 Id
+							</th>
+							<th>
+								 Details
+							</th>
+							<th>
+								 Submit Date
+							</th>
+							<th>
+								 Submited By
+							</th>
+							<th>
+								 Status
+							</th>
+							<th>
+								 Publish Date
+							</th>
+							<th>
+								 Action
+							</th>
+						</tr>
+						</tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer-wrap">
+	<div id="footer">
+		<div class="footer-container">
+			<div class="footer-nav">
+				<ul>
+					<li><a href="#"><span class="footer-button new-user"></span>New Users <span class="user-counter">30</span></a></li>
+					<li><a href="#"><span class="footer-button new-order"></span>New Order <span class="task-counter">30</span></a></li>
+					<li><a href="#"><span class="footer-button new-task"></span>New Task <span class="task-counter">30</span></a></li>
+					<li><a href="#"><span class="footer-button open-tickets"></span>Open Tickets <span class="ticket-counter">30</span></a></li>
+					<li><a href="#"><span class="footer-button new-comments "></span>New Comments <span class="zero-count">0</span></a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				 &copy; 2012 Ziown Admin Panel. All rights reserved
+			</div>
+		</div>
+		<div id="goTop">
+			<a href="#" class="tip-top" title="Go Top">Top</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

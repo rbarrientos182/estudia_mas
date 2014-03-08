@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Estudia Mas</title>
+
+
+<!-- 1140px Grid styles for IE -->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+	<!-- The 1140px Grid - http://cssgrid.net/ -->
+	<link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
+	
+	<!-- Your styles -->
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+    
+    <!-- Mi estilo -->
+    <link rel="stylesheet" href="css/estilo.css" type="text/css" media="screen" />
+	
+	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+    
+    <link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+   
+   
+    <!-- PERZONALIZACION DE LAS LISTAS//////////////////////// -->
+    
+    <link rel="stylesheet" href="css/sample.css" />
+<script src="js/jquery/jquery-1.8.2.min.js"></script>
+<!-- <msdropdown> -->
+<link rel="stylesheet" type="text/css" href="css/msdropdown/dd.css" />
+<script src="js/msdropdown/jquery.dd.min.js"></script>
+<!-- </msdropdown> -->
+	
+  <!-- //PERZONALIZACION DE LAS LISTAS//////////////////////////// -->
+  
+  
+  
+
+  
+  
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+	<div class="row">
+		<div class="twelvecol"> <img src="imagenes/header.png" width="1067" height="312" /> </div>
+	</div>
+
+</div>
+
+</header>
+
+<div style="clear:both; padding:30px;"></div>
+<section>
+
+<div class="container">
+	<div class="row">
+    <div class="onecol"></div>
+		<div class="fivecol">  
+       		 <div class="datospersonales"> DATOS PERSONALES <br /></div><br />
+             <form action="" method="post" >
+             <div class="fourcol">
+             
+              <label> <strong class="obligatorio">*</strong> Nombre: </label><br /><br /><br />
+              <label> <strong class="obligatorio">*</strong> Apellido Paterno: </label><br /><br />
+              <label> <strong class="obligatorio">*</strong> Apellido Materno: </label><br />
+             
+             </div>
+             
+             <div class=" twocol">
+              <input name="nombre" type="text" value="Nombre" size="40" required="required" />
+             <br /><br />
+             <input name="apellidop" type="text" value="Apellido Paterno" size="40"  required="required"/>
+             <br /><br />
+             <input name="apellidom" type="text" value="Apellido Materno" size="40" required="required" />
+             
+             </div>
+             
+             
+             
+             
+            
+             
+            
+
+        </div>
+        
+        <div class="fivecol">
+        <br /><br /><br />
+
+
+
+
+
+        <label> <strong class="obligatorio">*</strong> Genero:  </label>
+
+       <label> H </label> <input name="genero" type="radio" value="hombre"  />
+       <label> M </label> <input name="genero" type="radio"  value="mujer" /><br />
+
+<br />
+
+<label> <strong class="obligatorio">*</strong> Nacionalidad: </label>
+<input name="nacionalidad" type="text" value="Nacionalidad" size="40" required="required" />
+<br /><br />
+<label> <strong class="obligatorio">*</strong> Fecha de Nacimiento: </label>
+<input name="dia" type="number" value="dd"  required="required" style="width:50px;" />
+<input name="mes" type="number" value="mm"  required="required" style="width:50px;" />
+<input name="anio" type="number" value="aaaa" s required="required" style="width:50px;" />
+        
+        
+ </div>
+	</div>
+
+</div>
+
+<div style="clear:both; padding:50px;"></div>
+
+
+
+<div class="container">
+	<div class="row">
+    <div class="onecol"></div>
+		<div class="fivecol">  
+       		
+           <div class=" fivecol">     
+           <label><strong class="obligatorio">*</strong> Calle: </label><br /><br /><br />
+            <label> <strong class="obligatorio">*</strong> Colonia: </label><br /><br />
+              <label> <strong class="obligatorio">*</strong> Municipio o Delegación: </label><br /><br /><br />
+              <label> <strong class="obligatorio">* </strong>CP: </label><br /><br />
+              <label> Tel Casa (con LADA): </label><br /><br /><br />
+              <label><strong class="obligatorio">*</strong> Correo: </label><br /><br />
+               <label> Correo Alternativo: </label><br />
+           
+              </div>
+              
+           <div class="twocol">  
+           <input name="calle" type="text" value="Calle" size="40" required="required" /><br /><br />
+           <input name="colonia" type="text" value="Colonia" size="40"  required="required"/><br /><br />
+             <input name="municipio" type="text" value="Municipio" size="40" required="required" /><br /><br />
+                <input name="cp" type="text" value="CP" size="40" required="required" /><br /><br />
+                 <input name="telcasa" type="text" value="Telefono de casa" size="40" required="required" /><br /><br />
+                       <input name="correo" type="email" value="Correo" size="40" required="required" /><br /><br />
+                       <input name="correoalternativo" type="email" value="Correo Alternativo" size="40"  /><br /><br />
+                       
+                       
+                       
+                       
+                       <select id="estudios" name="estudios" style="width:150px;">
+  <option value="estudios">Ultimos estudios</option>
+  <option value="licenciatura">Licneciatura</option>
+  <option value="maestria">Maestria</option>
+  <option value="doctorado">Doctorado</option>
+</select>
+                   </div>
+           
+             
+            
+             
+
+
+             
+             
+        </div>
+        
+        <div class="fivecol">
+     
+        
+         <label><strong class="obligatorio">*</strong> Numero exterior </label>
+             <input name="numex" type="text" value="" size="10" required="required" />
+             
+           <label> Numero interior </label>
+             <input name="numin" type="text" value="" size="10" required="required" /><br />
+
+
+<br />
+
+<label> Estado: </label>
+<select id="estado" name="estado" style="width:120px">
+  <option value="Queretaro">Queretaro</option>
+  <option value="Monterrey">Monterrey</option>
+  <option value="Guadalajara">Guadalajara</option>
+  <option value="DF">Distrito Federal</option>
+</select>
+
+<br /><br />
+<label> Telefono trabajo: </label>
+<input type="text" value="Teléfono de trabajo" required="required" />
+<br /><br />
+<label> Telefono celular: </label>
+<input type="text" value="Teléfono celular" required="required" />
+        
+        
+ </div>
+	</div>
+
+</div>
+
+
+<div style="clear:both; padding:50px;"></div>
+
+<div class="container">
+
+<div class="row">
+
+<div class="onecol"></div>
+<div class="tencol"> 
+<div class="datospersonales"> ESTUDIOS <br /></div><br />
+
+<label> ¿Que quieres estudiar?  </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <input name="estudiar" type="radio" value="licenciatura"  />  <label> Licenciatura </label> 
+       <input name="estudiar" type="radio"  value="maestria" /> <label> Maestria </label> 
+      <input name="estudiar" type="radio"  value="diplomado" />  <label> Curso de Diplomados </label> 
+       <input name="estudiar" type="radio"  value="enlinea" /> <label> Programas en linea </label> 
+
+  </div> <!-- tencol --><br /><br /><br /><br /><br /><br />
+<div class="onecol">   </div> 
+
+</div>
+
+<div class="row">
+<div class="onecol"></div>
+
+<div class="tencol">
+		<div class=" threecol">     
+		<label>Opción 1</label><br /><br />
+
+ <select style="width:140PX;" name="ciudad" id="ciudad" >
+ 	 <option value=" ">Selecciona Ciudad</option>
+  <option value="Madrid">Madrid</option>
+  <option value="Mexico">México</option>
+ 
+	</select>
+		</div>
+
+<div class="threecol">
+<br /><br />
+<label for="universidad"></label>
+<select name="universidad" id="universidad">  </select>
+</select>
+
+</div>
+
+<div class=" threecol">
+<br /><br />
+<label for="programa"></label>
+<select name="programa" id="programa"></select>
+</select>
+
+
+
+</div>
+<br /><br /><br /><br /><br /><br />
+
+<div class=" threecol">     
+		<label>Opción 2</label><br /><br />
+
+			<select name="ciudadd" id="ciudadd" style="width:140px;">
+ 	 <option value="Ciudad">Ciudad</option>
+  <option value="">...</option>
+  <option value="">...</option>
+  <option value="">...</option>
+	</select>
+		</div>
+
+<div class=" threecol">
+<br /><br />
+<select name="universidadd" id="universidadd" style="width:140px;">
+  <option value="Universidad">Universidad</option>
+  <option value="">...</option>
+  <option value="">...</option>
+  <option value="">...</option>
+</select>
+
+</div>
+
+<div class=" threecol">
+<br /><br />
+<select name="programaa" id="programaa" style="width:140px;">
+  <option value="Programa">Programa</option>
+  <option value="">...</option>
+  <option value="">...</option>
+  <option value="">...</option>
+</select>
+
+</div>
+
+
+<div class="onecol"></div>
+
+
+</div>
+
+
+<div style=" clear:both;"></div>
+<br />
+
+
+
+
+
+
+
+<div style="clear:both; padding:15px;"></div>
+<div class="onecol"></div>
+<div class="tencol">
+<label>Opción 3</label><br /><br />
+
+<label>Sugerencias: </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  /> y <input type="text" />
+
+
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+</section>
+<div style="clear:both; padding:15px;"></div>
+<footer>
+<div class="container">
+<div class="row foter"> 
+<br />
+<br />
+<br />
+
+<div class="onecol"> </div>
+<div class="tencol">  <label> Medios por los que se entero de esta convocatoria </label><br />
+<select>
+  <option value="internet">Internet</option>
+  <option value="bolantes">Bolantes</option>
+  <option value="amigo">Amigo</option>
+  <option value="Television">Television</option>
+  <option value="Television">Otro</option>
+</select>
+
+
+
+<input style="float: right; margin-right:100px;" type="image" src="imagenes/btn_enviar.png"  />  
+
+
+</div>
+
+
+   
+</form>
+
+<div class="onecol"> </div>
+
+</div>
+</div>  
+
+
+</footer>
+
+
+
+
+
+</body>
+</html>
